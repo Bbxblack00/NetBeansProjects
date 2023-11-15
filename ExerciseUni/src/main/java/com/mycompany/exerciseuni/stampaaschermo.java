@@ -10,7 +10,7 @@ package com.mycompany.exerciseuni;
  */
 public class stampaaschermo {
     public void stampaaschermo() {
-        System.out.println("ciao mondo");
+        System.out.println("What's your name?\n");
     }
     
     public void stampaNome(int age, String name) {
