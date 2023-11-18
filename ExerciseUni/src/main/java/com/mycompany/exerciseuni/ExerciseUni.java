@@ -4,12 +4,16 @@
 
 package com.mycompany.exerciseuni;
 import java.util.Scanner;
+// exeptions
 import java.util.InputMismatchException;
+import java.lang.StringIndexOutOfBoundsException;
+
+import java.lang.StringBuilder;
 
 /**
  *
  * @author benny
- * @version 0.0.3
+ * @version 0.0.4
  */
 public class ExerciseUni {
         
@@ -70,6 +74,39 @@ public class ExerciseUni {
         }
         
         exr.stamp.stampaNome(12, exr.getName());
+        exr.stamp.vocalCounter(exr.getName());
         return;
+    }
+}
+
+enum Nazionalità {
+    
+    /** 
+     * Quando verrà chiamata questa enum automaticamente il costruttore otterrà 
+     * l'indice presente all'interno dell'alternatica qui sotto scelta
+     */
+    ITALIANA(0), AMERICANA(1), UE(2), ASIA(3), AFRICA(5), AUSTRALIA(6);
+    
+    private int ind;
+    
+    public int getIndexCode() {
+        return ind;
+    }
+    
+    /** 
+     * quando viene inizializzato un oggetto enum, a prescindere da cosa si 
+     * scelga è come se venisse chiamato il costruttore; 
+     * 
+     * ecco perchè passano il valore a ind;
+     */
+    Nazionalità (int ind) {
+        this.ind = ind;
+    }
+    
+    public String aera() {
+        switch(ind){
+            case 0:
+                
+        }
     }
 }

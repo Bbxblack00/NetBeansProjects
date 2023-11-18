@@ -30,4 +30,22 @@ public class stampaaschermo {
         
         return 0;
     }
+    
+    public void vocalCounter(String str) {
+        int num = 0;
+        String noVocal = "Non ci sono vocali";
+        if(str.length() == 0) System.out.println(noVocal);
+        if(str.indexOf(" ") >= 0) str.replace(" ", "");
+        for (int i = 0; i < str.length() ; i++){
+            char thisChar = str.toLowerCase().charAt(i);
+            num += 
+                    thisChar == 'a' ||
+                    thisChar == 'e' ||
+                    thisChar == 'i' ||
+                    thisChar == 'o' ||
+                    thisChar == 'u' 
+                    ? 1 : 0;
+        }
+        System.out.println("Il tuo nome ha: " + num + " vocali");
+    }
 }
